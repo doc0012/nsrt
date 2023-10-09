@@ -1,0 +1,20 @@
+ALGORITHM t_insert
+VAR
+  tab :  ARRAY_OF INTEGER[20];
+  v,j,s : INTEGER
+
+ BEGIN  
+
+     FOR v FROM 1 TO tab.length-1 STEP 1  DO
+     s := tab[v];
+     j := v;
+     WHILE (j>=1 AND tab[j-1]>s ) DO
+      tab[j]:=tab[j-1]
+      j:=j-1
+        
+     END_WHILE
+     tab[j] :=s
+       
+     END_FOR 
+    
+END
